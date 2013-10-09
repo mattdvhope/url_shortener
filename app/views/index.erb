@@ -9,4 +9,17 @@
   <input type="submit" name="Submit Button"/><br>  
 </form>
 
+<br>
+<center><a href='/all_urls'>Link to all links</a></center>
+
+<br>
+<%if @saved_url %>
+  <a href='<%= "/short/#{@saved_url.short_url}"%>'     ><%= @saved_url.short_url %></a><br>
+  <%= @saved_url.url_location %>
+  <%= @saved_url.click_count %>
+<% end %>
+
+
+
+
 

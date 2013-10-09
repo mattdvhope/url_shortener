@@ -1,0 +1,17 @@
+<h1>The are all of our urls</h1>
+
+<table>
+  <tr>
+    <th>Location</th>  
+    <th>Shortened Version</th>  
+    <th>Count</th>
+  </tr>  
+    <% @all_urls.each do |url| %>
+  <tr>
+    <td><%= url.url_location  %></td>
+    <td><%= url.short_url  %></td>
+    <td><%= url.click_count  %></td>
+  </tr>
+  <% end %>
+</table>
+

@@ -32,6 +32,9 @@ namespace :generate do
     end
   end
 
+
+
+
   desc "Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks"
   task :migration do
     unless ENV.has_key?('NAME')
@@ -84,6 +87,9 @@ namespace :generate do
   end
 
 end
+
+desc "Drop, Create, Migrate, Seed"
+task 'funky' => ["db:drop", "db:create", "db:migrate", "db:seed"]
 
 namespace :db do
   desc "Create the database at #{DB_NAME}"
